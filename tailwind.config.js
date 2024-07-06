@@ -18,6 +18,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        "reapp-primary": "hsl(var(--reapp-primary))",
+        "reapp-secondary": "hsl(var(--reapp-secondary))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
