@@ -67,12 +67,12 @@ export const HomeLayout: React.FC = () => {
       <div className="flex min-h-screen w-full flex-col bg-muted/40">
         <aside
           className={clsx(
-            'fixed top-0 z-10 left-0 w-64 h-screen transition-transform sm:translate-x-0',
+            'fixed top-0 z-10 left-0 w-64 h-screen bg-background transition-transform sm:translate-x-0',
             ['-translate-x-full', 'translate-x-0'][+isSidebarOpen]
           )}
           aria-label="Sidebar"
         >
-          <div className="pt-20 h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 bg-background border-r">
+          <div className="pt-20 h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800  border-r">
             <ul className="space-y-2 font-medium">
               <li>
                 <Link
