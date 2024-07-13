@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CircleUser, Sprout } from 'lucide-react';
+import { CircleUser, Sprout, PanelLeftOpen } from 'lucide-react';
 import { Link, Outlet } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import {
@@ -15,20 +15,24 @@ import {
 export const HomeLayout: React.FC = () => {
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 ">
+      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-2 md:px-6 ">
         <div className="flex items-center gap-4 justify-between w-full max-w-screen-lg mx-auto">
-          <nav className="gap-6 flex">
+          <button
+            data-drawer-target="default-sidebar"
+            data-drawer-toggle="default-sidebar"
+            aria-controls="default-sidebar"
+            type="button"
+            className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          >
+            <span className="sr-only">Open sidebar</span>
+            <PanelLeftOpen className="h-6 w-6" />
+          </button>
+          <nav className="gap-2 flex">
             <Link
               to="/"
-              className="flex items-center gap-2 text-lg font-semibold md:text-base"
+              className="flex items-center gap-2 text-lg font-semibold"
             >
               <Sprout className="h-8 w-8 text-reapp-primary" />
-              <span className="sr-only">Reapp</span>
-            </Link>
-            <Link
-              to="/"
-              className="text-foreground transition-colors hover:text-foreground text-lg font-medium"
-            >
               Reapp Admin Panel
             </Link>
           </nav>
@@ -50,9 +54,11 @@ export const HomeLayout: React.FC = () => {
           </DropdownMenu>
         </div>
       </header>
-      <main className="flex-1 flex flex-col items-center justify-center p-4">
-        <Outlet />
-      </main>
+      <div className="flex min-h-screen w-full flex-col bg-muted/40">
+        <main className="flex-1 flex flex-col items-center justify-center p-4">
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 };
