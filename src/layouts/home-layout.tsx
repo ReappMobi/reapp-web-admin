@@ -16,7 +16,7 @@ export const HomeLayout: React.FC = () => {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 justify-between">
-        <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+        <nav className="gap-6 flex">
           <Link
             to="#"
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
@@ -48,7 +48,7 @@ export const HomeLayout: React.FC = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </header>
-      <main className="flex-1 flex flex-col items-center justify-center">
+      <main className="flex-1 flex flex-col items-center justify-center p-4">
         <Outlet />
       </main>
     </div>
