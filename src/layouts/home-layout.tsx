@@ -6,6 +6,7 @@ import {
   PanelLeftOpen,
   CircleDollarSign,
   CircleCheckBigIcon,
+  Landmark,
 } from 'lucide-react';
 import { Link, Outlet } from 'react-router-dom';
 import { Button } from '../components/ui/button';
@@ -95,6 +96,15 @@ export const HomeLayout: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link
+                  to="institutions"
+                  className="flex items-center gap-2 p-2 text-gray-600 rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  onClick={() => setIsSidebarOpen(false)}
+                >
+                  <Landmark className="h-6 w-6" />
+                  Instituições
+                </Link>
+              </li>
             </ul>
           </div>
         </aside>
