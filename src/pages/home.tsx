@@ -16,7 +16,13 @@ import {
 } from '../components/ui/table';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '../components/ui/dropdown-menu';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from '../components/ui/dropdown-menu';
 import { MoreHorizontal } from 'lucide-react';
 
 export const Home: React.FC = () => {
@@ -52,7 +58,9 @@ export const Home: React.FC = () => {
                 <TableCell className="font-medium hidden md:table-cell">
                   <span>1</span>
                 </TableCell>
-                <TableCell className="font-medium">Istituto Floresta Viva</TableCell>
+                <TableCell className="font-medium">
+                  Istituto Floresta Viva
+                </TableCell>
                 <TableCell className="hidden md:table-cell">
                   2023-07-12 10:42 AM
                 </TableCell>
@@ -68,7 +76,7 @@ export const Home: React.FC = () => {
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                      <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                      <DropdownMenuLabel>Ações</DropdownMenuLabel>
                       <DropdownMenuItem>Aprovar</DropdownMenuItem>
                       <DropdownMenuItem>Recusar</DropdownMenuItem>
                     </DropdownMenuContent>
