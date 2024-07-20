@@ -68,7 +68,7 @@ export const Home: React.FC = () => {
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                      <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                      <DropdownMenuLabel>Ações</DropdownMenuLabel>
                       <DropdownMenuItem>Aprovar</DropdownMenuItem>
                       <DropdownMenuItem>Recusar</DropdownMenuItem>
                     </DropdownMenuContent>
